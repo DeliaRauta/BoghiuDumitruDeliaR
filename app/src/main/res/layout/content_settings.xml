@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_settings" tools:context="com.example.ichim.proiect.Settings">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView4" >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:weightSum="1">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Monthly income"
+                android:padding="10dp"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/sMonthlyIncome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Expenses limit"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="limit"
+                android:id="@+id/limit"
+                android:layout_gravity="right" />
+
+            <SeekBar
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/sExpenseLimit"
+                android:indeterminate="false"
+                android:max="1000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Salary date"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:id="@+id/sSalaryDate"
+                android:inputType="number" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Personal savings"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/sPersonalSavings" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save settings"
+                android:id="@+id/saveSettings"
+                android:onClick="SaveSettings" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
